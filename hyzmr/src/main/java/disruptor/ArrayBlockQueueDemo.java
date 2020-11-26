@@ -1,3 +1,5 @@
+package disruptor;
+
 /**
  * @Description:
  *  解决ArrayBlockQueue伪共享 增大数组元素的间隔使得由不同线程存取的元素位于不同的缓存行上，以空间换时间。

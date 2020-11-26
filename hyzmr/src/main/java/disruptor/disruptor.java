@@ -1,3 +1,5 @@
+package disruptor;
+
 import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.EventFactory;
 import com.lmax.disruptor.EventHandler;
@@ -8,7 +10,7 @@ import com.lmax.disruptor.dsl.ProducerType;
 import java.util.concurrent.ThreadFactory;
 
 /**
- * @Description: disruptor
+ * @Description: disruptor.disruptor
  * @author: mike
  * @date: 2020年09月25日 14:11
  */
@@ -39,7 +41,7 @@ public class disruptor
             @Override
             public void onEvent(Element element, long sequence, boolean endOfBatch)
             {
-                System.out.println("---Element: " + element.get());
+                System.out.println("---disruptor.Element: " + element.get());
             }
         };
 
@@ -60,8 +62,8 @@ public class disruptor
 
         RingBuffer<Element> ringBuffer = disruptor.getRingBuffer();
         //测试自己写的多线程调用同一个ringbuffer。
-       /* Thread t1=new Thread(new MikeTest(ringBuffer));
-        Thread t2=new Thread(new MikeTest(ringBuffer));
+       /* Thread t1=new Thread(new disruptor.MikeTest(ringBuffer));
+        Thread t2=new Thread(new disruptor.MikeTest(ringBuffer));
         t1.start();
         t2.start();*/
         long cursor = disruptor.getCursor();
