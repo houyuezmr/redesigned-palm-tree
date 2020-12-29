@@ -12,7 +12,7 @@ public class person1 {
         p.setAge(1);
         System.out.println(p.getAge());
         String s="nmdx";
-        System.out.println("nmdx".equals(s));
+        System.out.println("nmdx".equals(s)+"侯岳");
     }
     private void canChange(int ... data){
     }

@@ -9,7 +9,9 @@ public class Factorytest {
     public static void main(String[] args) {
         IFood iFood=Factory.getInstance("milk");
         iFood.eat();
+        
     }
+
 }
 interface IFood{
     public void eat();
